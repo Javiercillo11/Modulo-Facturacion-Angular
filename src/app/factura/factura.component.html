@@ -1,0 +1,67 @@
+
+<div class="container">
+  <br>
+  <div class="row">
+  <div class="items-table">
+    <div class="row header">
+        <div class="col-md-1">&nbsp;</div>
+        <div class="col-md-1">&nbsp;</div>
+        <div class="col-md-4"><p>Descripcion</p></div>
+        <div class="col-md-2"><p>Cantidad</p></div>
+        <div class="col-md-2 ng-binding"><p>Coste €</p></div>
+        <div class="col-md-2 text-right"><p>Total</p></div>
+    </div>
+
+    <!-- <div class="row">
+      <div class="col-md-1 remove-item-container"><a href="#" class="btn btn-primary">[+]</a></div>
+      <div class="col-md-1 remove-item-container"><a href="#" class="btn btn-danger">[X]</a></div>
+        <div class="col-md-4"><input type="text" placeholder="Descripcion"></div>
+        <div class="col-md-2"><input type="number" placeholder="0"></div>
+        <div class="col-md-2 ng-binding"><input type="text" placeholder="0"></div>
+        <div class="col-md-2 text-right"><input type="text" placeholder="€0.00"></div>
+    </div> -->
+
+    <tbody>
+      <tr *ngFor="let task of tasks; let idx = index">
+        <ng-template #elseTd>
+          <td>{{ idx + 1 }}. {{task.descripcion}}</td>
+      </ng-template>
+        <td> <button class="btn btn-primary btn-xs" (click)="addTask(taskInput)">[+]</button></td>
+          <td> <button class="btn btn-danger btn-xs" (click)="deleteTask(idx)">[X]</button></td>
+          <td><input id="des" type="text" name="task" placeholder="Descripcion" #taskInput></td>
+          <td><input id="can" type="number" name="task" placeholder="Cantidad" #taskInput></td>
+          <td><input id="cost" type="number" name="task" placeholder="Coste" #taskInput></td>
+          <td><h6>{{ task.coste * task.cantidad | currency:'EUR' }}</h6></td>
+      </tr>
+  </tbody>
+
+    <!-- <div class="row invoice-item">
+      <div class="col-md-12 add-item-container" ng-hide="printMode">
+        <a class="btn btn-primary">[+]</a>
+      </div>
+    </div> -->
+
+    <!-- <div class="row">
+      <div id="sub" class="col-md-10 text-right"><p>Sub Total</p></div>
+      <div id="sub" class="col-md-2 text-right ng-binding"><p>€0.00</p></div>
+    </div>
+
+    <div class="row">
+      <div id="sub" class="col-md-10 text-right"><p>IVA(%)</p></div>
+      <div id="sub" class="col-md-2 text-right ng-binding"><p>€0.00</p></div>
+    </div> -->
+
+    <div class="row">
+      <div id="sub" class="col-md-10 text-right"><p>Total</p></div>
+      <div id="sub" class="col-md-2 text-right ng-binding"><p>€0.00</p></div>
+    </div>
+
+  </div>
+</div>
+<tfoot>
+  <tr>
+      <br>
+      <button id="limpiar" class="btn btn-primary" (click)="clearToDo()">Limpiar Todo</button>
+  </tr>
+</tfoot>
+</div>

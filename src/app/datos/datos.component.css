@@ -1,0 +1,11 @@
+input{
+    margin-bottom: 10px;
+    border: 0;
+    outline: none;
+    background-color: rgb(214, 245, 255);
+    width: 100%;
+
+}
+p{
+    font-weight: bold;
+}

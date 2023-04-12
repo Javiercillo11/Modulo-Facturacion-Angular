@@ -1,0 +1,38 @@
+p{
+    font-weight: bold;
+}
+#sub{
+    text-align: right;
+}
+input{
+    margin-bottom: 10px;
+    border: 0;
+    outline: none;
+    background-color: rgb(214, 245, 255);
+    width: 100%;
+
+}
+#limpiar{
+    color: white;
+}
+
+#des{
+    margin-left: 120px;
+    background-color: rgb(214, 245, 255);
+    width: 400px;
+}
+#can{
+    margin-left: 30px;
+    background-color: rgb(214, 245, 255);
+    width: 120px;
+}
+#cost{
+    margin-left: 100px;
+    background-color: rgb(214, 245, 255);
+    width: 120px;
+}
+h6{
+    margin-left: 100px;
+    
+    width: auto;
+}
